@@ -1,0 +1,70 @@
+PESTICIDE EFFECTS ON MOSQUITO EGG-LAYING BEHAVIOR
+================================================
+
+STUDY CONTEXT:
+--------------
+Testing effectiveness of pesticide-treated egg-laying traps for pest 
+management. Females exposed to treated traps show reduced reproduction 
+through two mechanisms:
+
+1. BEHAVIORAL AVOIDANCE: Females detect pesticide and lay fewer eggs
+2. DIRECT TOXICITY: Pesticide residues reduce egg viability/hatching
+
+EXPERIMENTAL DESIGN:
+-------------------
+Study Period: May 1, 2023 - August 31, 2023
+Sites: Three agricultural field sites
+  - Site A 
+  - Site B 
+  - Site C 
+
+Treatments (n=~37-38 per treatment):
+  - Control: No pesticide in traps
+  - Low_dose: 0.5% active ingredient
+  - Medium_dose: 1.0% active ingredient
+  - High_dose: 2.0% active ingredient
+
+VARIABLES:
+----------
+female_id: Unique identifier for each female insect
+  - Type: Integer
+  - Should be unique unless repeated measures (weekly sampling)
+
+treatment: Pesticide concentration in egg-laying trap
+  - Type: Categorical
+  - Levels: Control, Low_dose, Medium_dose, High_dose
+
+age_days: Age of female at collection (days post-emergence as adult)
+  - Type: Integer
+  - Normal range: 20-90 days
+  - Younger females (<30 days) produce fewer eggs naturally
+
+body_mass_mg: Female body mass in milligrams
+  - Type: Numeric (continuous)
+  - Normal range: 50-130 mg
+  - Varies by site 
+  - Correlates with egg production capacity
+
+eggs_laid: Total number of eggs laid by female
+  - Type: Integer (count)
+  - Expected dose-response:
+    * Control: 50-70 eggs (baseline)
+    * Low_dose: reduction 
+    * Medium_dose: reduction (strong avoidance)
+    * High_dose: reduction (strong avoidance + physiological stress)
+  - Also affected by age, body mass, and site conditions
+
+eggs_hatched: Number of eggs that successfully hatched
+  - Type: Integer (count)
+
+collection_date: Date of data collection
+  - Type: Date
+  - Range: 2023-05-01 to 2023-08-31
+
+collector: Person who collected data
+  - Type: Categorical
+  - Levels: Smith, Jones, Garcia
+
+site: Field site location
+  - Type: Categorical  
+  - Levels: Site_A, Site_B, Site_C
