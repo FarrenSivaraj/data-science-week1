@@ -39,4 +39,4 @@ mosquito_egg_raw |>
 # - Anything surprising?
 #   hard to say, histogram for age days is surprisingly flat. Histogram for eggs is skewed to the left
 # - Any obvious problems?
-#   NAs, different case for the same factors, negative body mass
+#   NAs, different case for the same factors, negative body mass, more eggs hatched than laid
