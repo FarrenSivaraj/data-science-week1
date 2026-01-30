@@ -1,1 +1,3 @@
 Git and Rstudio. Are they linked? used the console of Rstudio.
+
+Git needs you to stage before you commit
