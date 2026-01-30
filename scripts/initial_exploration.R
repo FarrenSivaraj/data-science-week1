@@ -31,12 +31,12 @@ mosquito_egg_raw |>
 # Observations ====
 # Your observations (add as comments below):
 # - What biological system is this?
-#  
+#    animal species that lays eggs
 # - What's being measured?
-#   
+#   changes in offspring/ eggs laid under different conditions
 # - How many observations?
-#   
+#   205 rows, 9 columns
 # - Anything surprising?
-#   
+#   hard to say, histogram for age days is surprisingly flat. Histogram for eggs is skewed to the left
 # - Any obvious problems?
-#
+#   NAs, different case for the same factors, negative body mass
