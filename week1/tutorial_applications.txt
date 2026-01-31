@@ -183,3 +183,88 @@ CONNECTING TO MY DATA:
    
    
 ================================================================================
+
+
+================================================================================
+TUTORIAL 5: NUMERIC & CROSS-VARIABLE CONSISTENCY - APPLICATION CHECKLIST
+================================================================================
+
+[_/] I completed the tutorial exercises
+
+
+PART A: NUMERIC PLAUSIBILITY
+-----------------------------
+
+1. Did I identify any numeric plausibility questions in my Week 1 questions list?
+
+   [_/] YES - Question #(s): How is there a negative body mass?
+   [ ] NO - Skip to Part B
+
+
+2. If YES, which numeric variable looks suspicious?
+
+   Variable name: body_mass_g
+   
+   Minimum value: -93  | Is this biologically possible? [ ] Yes [X] No [ ] Unsure
+   Maximum value: 108.71  | Is this biologically possible? [ ] Yes [ ] No [X] Unsure
+   
+
+   Why do these look wrong?
+   [X] Negative value (impossible for this measurement)
+   [ ] Zero (should be NA instead)
+   [ ] Too large (exceeds known biological maximum)
+   [ ] Too small (below known biological minimum)
+   [ ] Possible units confusion (mixed kg and g?)
+   [ ] Other: ___________
+
+
+
+PART B: CROSS-VARIABLE CONSISTENCY
+-----------------------------------
+
+4. Did I identify any cross-variable questions in my Week 1 questions list?
+
+   [ ] YES - Question #(s): ___________
+   [X] NO - But I'll check anyway
+
+
+5. Choose TWO variables that should be related (e.g., body length and body mass,
+   sex and reproductive status, species and location):
+
+   Variable 1: eggs_laid
+   Variable 2: eggs_hatched
+   
+   What relationship do I expect between them?
+   [ ] Positive correlation (both increase together)
+   [ ] Negative correlation (one increases, other decreases)
+   [X] Biological constraint (certain combinations impossible)
+   [ ] Spatial constraint (certain combinations shouldn't occur)
+   [ ] Other: ___________
+   
+   Describe the expected relationship:
+    fewer eggs hatched than were laid. There should be no instance where more eggs hatched than were laid
+
+
+6. Think about consequences:
+
+   If these variables are inconsistent, what should I do?
+   [X] Remove the observations
+   [ ] Convert one variable to NA (which one? _________)
+   [X] Flag for review but keep both
+   [X] Query the data collector
+   [ ] Other: ___________
+   
+   Justification:
+    Inconsistencies may suggest incorrect gathering of data, 
+    or possible contamination due to other factors. 
+    Therefore, its best to find the cause of the inconsistency if possible, 
+    so it can be factored in.
+    Regardless, using inconsistent data will cause problems for any analysis that has them,
+    and keeping track, especially if there are many, 
+    makes it more likely to keep them within the data set due to human error. 
+    Unless the data collecter can determine which variable is incorrect, it is impossible to 
+    guarantee the variable you are keeping will be accurate.
+    Therefore, removing the incorrect values is best since it prevents any incorrect values from
+    entering the analysis.
+    
+================================================================================
