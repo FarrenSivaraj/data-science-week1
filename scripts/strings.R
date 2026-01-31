@@ -60,7 +60,7 @@ penguins_clean_names |>
 str_to_upper(penguins_clean_names$species)
 head(penguins_clean_names)
 
-# does not work, because there is no lation in the file
+# does not work, because there is no latin in the file
 # using regex for name simplifying. But LLMs are good for building complex snippets
 penguins_clean_names |> 
   separate(
