@@ -116,3 +116,40 @@ CONNECTING TO MY DATA:
 
 ================================================================================
 
+
+================================================================================
+TUTORIAL 3: CHECKING MISSING DATA PATTERNS - APPLICATION CHECKLIST
+================================================================================
+
+[_/] I completed the tutorial exercises
+
+
+CONNECTING TO MY DATA:
+----------------------
+
+1. Did I identify any missing data questions in my Week 1 questions list?
+
+   [_/] YES - Question #(s): Why are there NAs for body mass, and the number of eggs hatched and laid?
+   [ ] NO - But I'll check anyway (missing data is common)
+
+
+2. Which variables have the most missing data?
+
+   Variable: comments | Percent missing: 84%
+   Variable: delta_13_c_o_oo | Percent missing: 4%
+   Variable: delta_15_c_o_oo | Percent missing: 4%
+
+
+3. Missingness types checklist
+
+
+   [_/] MCAR (Missing Completely At Random) - appears random/scattered
+   [ ] MAR (Missing At Random) - related to other observed variables
+   [_/] MNAR (Missing Not At Random) - related to the missing value itself
+
+Why is it important to know what type of missing data we have? 
+
+so we can remove bias from our analysis. Missing data can often be due to other factors,
+therefore should be considered when determining if data related to those NAs should be kept
+
+================================================================================
