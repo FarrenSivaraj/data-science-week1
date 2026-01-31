@@ -153,3 +153,33 @@ so we can remove bias from our analysis. Missing data can often be due to other 
 therefore should be considered when determining if data related to those NAs should be kept
 
 ================================================================================
+
+
+================================================================================
+TUTORIAL 4: CHECKING DUPLICATES - APPLICATION CHECKLIST
+================================================================================
+
+[_/] I completed the tutorial exercises
+
+
+CONNECTING TO MY DATA:
+----------------------
+
+1. Did I identify any duplicate-related questions in my Week 1 questions list?
+
+   [_/] YES - Question #(s): Why are there duplicates for some of the records?
+   [ ] NO - But I'll check anyway
+
+
+3. Think about consequences:
+
+   If I remove duplicates, what am I assuming?
+   
+   
+   If duplicates are actually repeated measures, what should I do instead?
+   [ ] Keep them - they're legitimate observations
+   [_/] Flag them for later analysis that accounts for non-independence
+   [ ] Other: ___________
+   
+   
+================================================================================
