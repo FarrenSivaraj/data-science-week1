@@ -1,0 +1,55 @@
+WEEK 2 CLEANING PLAN
+====================
+Name: [Farren Sivaraj]
+Date: [31/01/2026]
+
+I've completed all 5 tutorials and application checklists.
+
+Looking across all my checklists, these are the 2 most important issues 
+to address in Week 2: 
+
+
+ISSUE 1 (Most Important)
+-------------------------
+Brief description: [Some variables have different characters for the same distinct characteristic]
+
+Which tutorial provides the solution: [strings]
+
+Which variable(s) affected: [Site, collector, treatment]
+
+Why this is important to fix: [With different characters, variables of the same type wont be grouped, which will make it hard to compare between different factors]
+
+What I plan to do: [Find all factors with similar characters that suggest they should be part of the same group, then change the names of all by one, so they are all seen as part of that same group when analysing the data]
+
+
+
+ISSUE 2 (Second Most Important)
+--------------------------------
+Brief description: [There are multiple duplications of data within the dataset]
+
+Which tutorial provides the solution: [duplicates]
+
+Which variable(s) affected: [duplication of entire rows]
+
+Why this is important to fix: [duplciates do the same data will change the mean and median, skewing the dataset]
+
+What I plan to do: [ Simply remove the duplicate rows. Also, to be sure I'll check for less obvious duplicates within the data, where there are identical values for the majority of the varaibles]
+
+
+
+OTHER ISSUES I NOTICED (but won't fix in Week 2)
+-------------------------------------------------
+- [Issue 3 - there are many inconsistencies]
+- [Issue 4 - uncertain how to handle]
+- [Issue 5 - decided to leave as-is because...]
+
+
+QUESTIONS TO DISCUSS IN WEEK 2
+-------------------------------
+Things I'm still unsure about:
+
+1. whether I've missed any problems in the data set
+
+2. If there are components of the metadata that will show parts of the data to be incorrect
+
+3. If my plans to fix issues in the data will work properly or if i'll need to rethink my approach
