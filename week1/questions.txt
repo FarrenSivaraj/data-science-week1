@@ -1,1 +1,3 @@
 What is the purpose of the git console, how can it be used?
+
+What does it mean to conditionally change something?
