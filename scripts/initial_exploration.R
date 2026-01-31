@@ -47,3 +47,5 @@ mosquito_egg_raw |>
     n = n(),
     n_distinct(female_id)
   )
+
+# Checking that the change in folder has not affected the github connection
