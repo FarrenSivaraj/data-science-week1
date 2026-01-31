@@ -40,3 +40,10 @@ mosquito_egg_raw |>
 #   hard to say, histogram for age days is surprisingly flat. Histogram for eggs is skewed to the left
 # - Any obvious problems?
 #   NAs, different case for the same factors, negative body mass, more eggs hatched than laid
+
+#  counting unique entries
+mosquito_egg_raw |> 
+  summarise(
+    n = n(),
+    n_distinct(female_id)
+  )
