@@ -1,3 +1,10 @@
-What is the purpose of the git console, how can it be used?
 
-What does it mean to conditionally change something?
+Q1: Why are there multiple repeats of the factor names?
+
+Q2: Why are there NAs for body mass, and the number of eggs hatched and laid?
+
+Q3: How is there a negative body mass?
+
+Q4: Why are there duplicates for some of the records?
+
+Q5: Why is the body mass so precise? did they really record weight in mg to 6 decimal places, and are they needed?
