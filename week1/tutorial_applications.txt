@@ -1,0 +1,53 @@
+================================================================================
+TUTORIAL 1: CHECKING STRINGS - APPLICATION CHECKLIST
+================================================================================
+
+[ ] I completed the tutorial exercises
+
+
+CONNECTING TO MY DATA:
+----------------------
+
+1. Did I identify any string-related questions in my Week 1 questions list?
+
+   [ ] YES - Question #(s): question one, found repeats of factor names for the same things e.g. High_dose and HIGH_DOSE
+   [ ] NO - Skip to question 4
+
+
+2. If YES, which technique from this tutorial could help address my question?
+
+   [ ] str_to_lower() - standardize capitalization
+   [ ] str_to_upper() - standardize capitalization  
+   [ ] str_trim() - remove leading/trailing whitespace
+   [ ] str_replace() - fix typos or inconsistent spellings
+   [ ] Other: because there are mutliple slightly different character strings for the same variable, while str_to_upper would help for some, its best to use distinct() to find all of the names, then use case_when to change all but one, so all variables have the exact same identifier 
+   [ ] None of these apply
+
+
+3. Show what this technique would DO to my data:
+
+   Variable name: _Medium_dose_
+   
+   Example values BEFORE:
+   - Medium_dose
+   - MEDIUM_DOSE
+   - 
+   
+   What they would become AFTER:
+   - Medium_dose
+   - 
+   - 
+
+
+4. If this tutorial is NOT relevant to my data:
+
+   Why not? (Check all that apply)
+   [ ] I don't have any character/text variables
+   [ ] My text variables are already clean
+   [ ] My string issues are different from what this tutorial covers
+   [ ] Other: ___________
+
+
+================================================================================
+
+
