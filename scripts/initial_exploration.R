@@ -102,26 +102,43 @@ mosquito_egg_data_step2 |>
   # [Removed completely identical rows. exact same values for all very unlikely, especially 
   # including date and body mass. Therefore, data will not be skewed by the duplicates]
 
-# Implement----
+# Possible Fixes----
 
-# FIX 3:[fixing NAs - method suggested simply removed NA columns]
+view(mosquito_egg_data_step2)
 
-mosquito_egg_data_NA <- mosquito_egg_data |>
+# FIX 3:[fixing NAs - method suggested simply removed NA columns]----
+
+mosquito_egg_data_NA <- mosquito_egg_data_step2 |>
   filter(if_any(everything(), is.na))
 view(mosquito_egg_data_NA)
-# two others dropped all NAs, but from what i can see most missing NAs
+# two others dropped all NAs, but from what i can see most missing NAs are
 # due to not counting eggs laid or body mass. For both missing NAs are significant
 # since both are needed to determine the effect of the result. 
-# I think egg number is the most important point, bosy mass may be ignorable.
+# I think egg number is the most important point, body mass may be fine.
 # Will likely remove the NA rows missing eggs, 
-# but for body may it is less significant to the focus so I will have 
-# to consider removing completely or dropping temporarily
+# but for body mass it is less significant to the focus so I will have 
+# to consider removing it completely or dropping it temporarily
 
 
-# FIX 4:[Impossible values, negatives and erroneous values]
+# FIX 4:[Impossible values, negatives and erroneous values]----
 
-glimpse(mosquito_egg_data)
+glimpse(mosquito_egg_data_step2)
 
-# don't understand the method used. filtered anything higher than 10mg for body mass?
+# don't understand the method used. Filtered anything higher than 10mg for body mass?
+# probably best I use the metadata.txt and code from data_consistency.R to 
+# fix it before week 3, removing values that go outside of the expected values 
+# of the metadata
 
-# FIX 5:[Dates may not be in the correct format]
+mosquito_egg_data_step2 |> 
+  summarise(
+    min_mass = min(body_mass_mg, na.rm = TRUE),
+    max_mass = max(body_mass_mg, na.rm = TRUE))
+
+mosquito_egg_data_step2 |>
+  filter(body_mass_mg <= 0)
+# negative values don't seem to extreme if they were positive, probably a typo, 
+# can change to positive
+
+# FIX 5:[Dates may not be in the correct format]----
+
+# current format is YYYY-MM-DD or ymd, but it may be better to change it to dmy
