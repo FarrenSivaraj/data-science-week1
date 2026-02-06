@@ -45,7 +45,53 @@ mosquito_egg_raw |>
 mosquito_egg_raw |> 
   summarise(
     n = n(),
-    n_distinct(female_id)
-  )
+    n_distinct(female_id))
 
 # Checking that the change in folder has not affected the github connection
+
+
+
+# FIX 1: [Multiple names for the same distinct value e.g. differences in capitalization] ====
+
+# Show the problem:
+mosquito_egg_raw |> distinct(collector,site,treatment)
+
+# Fix it:
+mosquito_egg_data_step1 <- mosquito_egg_raw |>
+  # YOUR CODE HERE
+  mutate(collector = case_when(
+    collector == "Smyth" ~ "Smith",
+    collector == "Garci" ~ "Garcia",
+    .default = as.character(collector)))
+  
+  # Verify it worked:
+mosquito_egg_data_step1 |> distinct(collector)
+  
+  # What changed and why it matters:
+  # [Changed the characters for different variable names that were 
+  # likely to be misspellings of other names 
+  # e.g. Garcia as Garci or Smith as Smyth corrections reduces error from 
+  # splitting values into false groups, ensures values are stored 
+  # under the proper distinct names]
+  
+
+  # FIX 2: [duplicates fo whole rows of data]  ====
+
+# Show the problem:
+mosquito_egg_data_step1 |> 
+  get_dupes()
+
+# Fix it:
+mosquito_egg_data_step2 <- mosquito_egg_data_step1 |>
+  # YOUR CODE
+filter(!duplicated(across(everything())))
+  
+  # Verify it worked:
+mosquito_egg_data_step2 |> 
+  get_dupes()
+
+  
+  # What changed and why it matters:
+  # [Removed completely identical rows. exact same values for all very unlikely, especially 
+  # including date and body mass. Therefore, data will not be skewed by the duplicates]
+  #
