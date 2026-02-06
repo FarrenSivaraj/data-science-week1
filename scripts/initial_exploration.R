@@ -102,3 +102,26 @@ mosquito_egg_data_step2 |>
   # [Removed completely identical rows. exact same values for all very unlikely, especially 
   # including date and body mass. Therefore, data will not be skewed by the duplicates]
 
+# Implement----
+
+# FIX 3:[fixing NAs - method suggested simply removed NA columns]
+
+mosquito_egg_data_NA <- mosquito_egg_data |>
+  filter(if_any(everything(), is.na))
+view(mosquito_egg_data_NA)
+# two others dropped all NAs, but from what i can see most missing NAs
+# due to not counting eggs laid or body mass. For both missing NAs are significant
+# since both are needed to determine the effect of the result. 
+# I think egg number is the most important point, bosy mass may be ignorable.
+# Will likely remove the NA rows missing eggs, 
+# but for body may it is less significant to the focus so I will have 
+# to consider removing completely or dropping temporarily
+
+
+# FIX 4:[Impossible values, negatives and erroneous values]
+
+glimpse(mosquito_egg_data)
+
+# don't understand the method used. filtered anything higher than 10mg for body mass?
+
+# FIX 5:[Dates may not be in the correct format]
